@@ -33,6 +33,7 @@ if (!file_exists(__DIR__ . '/entries.json')) {
 
 if (array_key_exists('add', $_POST)) {
     add($_POST['text']);
+    header('location: /');
 }
 
 if (array_key_exists('toggle', $_POST)) {
