@@ -57,20 +57,20 @@ if (array_key_exists('delete', $_POST)) {
     <button name="add">add</button>
 
     <ul>
-        <? foreach (load() as $i => $entry): ?>
+        <?php foreach (load() as $i => $entry): ?>
             <li>
                 <button name="toggle[<?= $i ?>]">
-                    <? if ($entry->done): ?>
+                    <?php if ($entry->done): ?>
                         &#9745;
-                    <? else: ?>
+                    <?php else: ?>
                         &#9744;
-                    <? endif; ?>
+                    <?php endif ?>
                 </button>
                 <button name="delete[<?= $i ?>]">
                     delete
                 </button>
                 <?= htmlentities($entry->text) ?>
             </li>
-        <? endforeach; ?>
+        <?php endforeach ?>
     </ul>
 </form>
